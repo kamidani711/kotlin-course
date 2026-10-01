@@ -15,5 +15,6 @@ This log documents daily learnings, challenges tackled, root causes identified, 
   - Verified local development environment (Java 17, Git, Android Studio, Android SDK).
   - Located existing projects on drive `E:\` (*Docket*, *Chit* / *Receipt Scanner*, *Plateful*).
   - Verified `.gitignore` shields sensitive keys (`.jks`, `secrets.properties`).
+  - Day 1 verified: ComposeStarter running on physical phone
 
 ---
