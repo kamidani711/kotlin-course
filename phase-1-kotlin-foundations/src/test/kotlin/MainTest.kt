@@ -38,4 +38,22 @@ class MainTest {
     fun gradeAt0IsF(){
         assertEquals("F", grade(0))
     }
+
+    @Test
+    fun gradeUnitTest(){
+        for (grade in 1..100){
+            if (grade <= 54){
+                assertEquals("F",grade(grade))
+            }else if (grade <= 64){
+                assertEquals("D", grade(grade))
+            }else if(grade <= 74){
+                assertEquals("C", grade(grade))
+            }else if(grade <= 84){
+                assertEquals("B", grade(grade))
+            }else {
+                assertEquals("A", grade(grade))
+            }
+        }
+
+    }
 }
