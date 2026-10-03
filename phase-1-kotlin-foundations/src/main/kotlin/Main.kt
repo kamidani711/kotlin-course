@@ -4,12 +4,9 @@ fun main() {
     val name = "Kamran"
     println(greet(name = name))
     val amount = 1500.0
-    println("vat amount is: ${calculateVat(amount)}")
-    println("The grade for 85 is: ${grade(85)}")
-    println("The grade for 75 is: ${grade(75)}")
-    println("The grade for 65 is: ${grade(65)}")
-    println("The grade for 55 is: ${grade(55)}")
-    println("The grade for 45 is: ${grade(45)}")
+    for (grade in 1..100){
+        println("The grade for ${grade} is: ${grade(grade)}")
+    }
 
     loopTesting()
 
@@ -35,9 +32,10 @@ fun loopTesting() {
         println(i)
     }
 
-    for (even in 0..10 step 2) {
+    for (even in 2..10 step 2) {
             println(even)
     }
+
 }
 
 fun isAdult(age: Int): Boolean = age >= 18
