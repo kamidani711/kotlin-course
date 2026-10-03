@@ -13,33 +13,31 @@ fun main() {
 
     loopTesting()
 
-    println("19 is adult:${isAdult(18)}")
+    println("18 is adult:${isAdult(18)}")
 }
 
 fun double(n: Int): Int = n + n
-fun greet(name: String, greeting: String = "Hello"):String = greeting + " " +name
+fun greet(name: String, greeting: String = "Hello"): String = greeting + " " + name
 
 fun calculateVat(amount: Double, rate: Double = 0.05): Double = amount * rate
 
-fun grade(score: Int): String{
-    var grade = when(score){
-        85 -> "A"
-       75 -> "B"
-       65 -> "C"
-       55 -> "D"
+fun grade(score: Int): String = when(score) {
+       in 85..100 -> "A"
+       in 75..84 -> "B"
+       in 65..74 -> "C"
+       in 55..64 -> "D"
        else -> "F"
     }
-    return grade
-}
-fun loopTesting(){
-    for (i in 1..10){
+
+
+fun loopTesting() {
+    for (i in 1..10) {
         println(i)
     }
 
-    for (even in 1..10){
-        if (even % 2 == 0){
+    for (even in 0..10 step 2) {
             println(even)
-        }
     }
 }
-fun isAdult(age: Int): Boolean = if (age >= 18 )  true else false
+
+fun isAdult(age: Int): Boolean = age >= 18
